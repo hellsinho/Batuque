@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Batuque</title>
+
+    <!-- box icons link -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remix icons link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <a href="#" class="logo"><img src="img/logo.svg" alt="batuque-sobre-baquetas-cruzadas" width="110px"></span></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navlist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">O que fazemos</a></li>
+            <li><a href="#portifolio">Recursos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+
+        <div class="top-btnn">
+            <a href="#" class="h-btn">contate-nos</a>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <section class="hero" id="home">
+        <div class="main-content" data-aos="fade-in">
+            <h1><span>BATUQUE</span></h1>
+            <h4>A sua bateria de realidade aumentada para batucar em qualquer lugar</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione pariatur iure quaerat dolorum, aperiam
+                id laborum expedita ut sint incidunt repellat perferendis quidem rem velit fugiat ab animi voluptatum
+                repudiandae!</p>
+        </div>
+        <div class="social">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-x-fill"></i></a>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+        </div>
+
+        <div class="main-btn">
+            <a href="#" class="btn">Conheça a Batuque</a>
+            <a href="#" class="btn btn2">Saiba mais</a>
+        </div>
+    </section>
+
+    <!-- about -->
+
+    <section class="about" id="about">
+        <div class="about-img" data-aos="zoom-in-down">
+            <img src="img/logo.svg" alt="">
+        </div>
+        <div class="about-text" data-aos="zoom-in-up">
+            <h2>Sobre a Batuque<br><span>A bateria de realidade aumentada
+
+                </span></h2>
+            <div class="exp-area">
+                <p>A InSpace nasceu em laboratórios de pesquisa em computação e análise de risco da UFPE. Em 2022,
+                    decidimos criar as melhores ferramentas de IA para controle de falhas na indústria e monitoramento
+                    de riscos, com foco no aumento da produtividade industrial, usabilidade e experiência dos nossos
+                    produtos.</p>
+                <span>
+                    Nosso grande diferencial está no fato de sermos hardwareless, ou seja, não se faz necessário o uso
+                    de sensores ou qualquer outro tipo de aparelho para usufruir da nossa aplicação. Desta forma, você
+                    somente precisa de um lugar confortável e a câmera de seu aparelho para batucar conosco.
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- services -->
+    <section class="services" id="services">
+        <div class="center-text" data-aos="fade-down">
+            <h2>O QUE <span>FAZEMOS?</span></h2>
+        </div>
+        <div class="services-content" data-aos="zoom-in-up">
+            <div class="box">
+                <h3>BOMBASTIC VIDEO DO CARA TOCANDO</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, odio. Deserunt animi consequuntur
+                    quaerat aut doloribus veniam similique est perferendis accusamus, sed perspiciatis non magnam sunt
+                    aperiam quod, quidem porro.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+
+    <section class="contact" id="contact">
+        <div class="center-text" data-aos="fade-down">
+            <h2>Vamos entrar em <span>contato?</span></h2>
+            <div class="invite-text">
+                <span>Fique à vontade para deixar seu feedback sobre nosso produto!</span>
+            </div>
+        </div>
+
+
+        <div class="contact-form" data-aos="zoom-in-up">
+            <form action="">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Email Address..." required>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Escreva aqui sua mensagem" required></textarea>
+                <input type="submit" name="" value="Send Message" class="send-btn">
+            </form>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="copyright">
+            <p>2024 Batuque, All Rights Reserved</p>
+        </div>
+        <a href="#home" class="scroll-top">
+            <i class="ri-arrow-up-s-fill"></i>
+        </a>
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 1400,
+        });
+    </script>
+
+</body>
+
+</html>
