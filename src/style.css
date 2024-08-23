@@ -36,7 +36,6 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 2px 16%;
-  background: #22282f;
   transition: all 0.5s ease;
 }
 
@@ -47,7 +46,7 @@ header {
 
 .navlist a {
   font-size: var(--p-font);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--other-color);
   margin-left: 40px;
   transition: all 0.5s ease;
@@ -63,6 +62,7 @@ header {
   max-height: 150px;
   width: auto;
   height: auto;
+  padding: 20px;
 }
 
 span {
@@ -501,6 +501,12 @@ form .send-btn:hover {
     text-align: center;
   }
 
+  
+  .hero {
+    height: 50vh;
+    padding-bottom: 0;
+  }
+
   .about-img img {
     text-align: center;
     width: 100%;
@@ -509,6 +515,17 @@ form .send-btn:hover {
     border-radius: 50%;
     object-fit: cover;
     margin: 0 auto;
+  }
+
+  .main-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+  }
+
+  .main-btn .btn2{
+    margin: 0;
   }
 
   :root {
@@ -522,6 +539,7 @@ form .send-btn:hover {
   :root {
     --h1-font: 3.5rem;
   }
+
 
   .social {
     margin-bottom: 20px;
@@ -554,16 +572,42 @@ form .send-btn:hover {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 700px) {
   .main-content p {
     width: 100%;
   }
+
+  .hero{
+    background: none;
+    height: 100vh;
+  }
+  
+  header{
+    padding: 0 8%;
+  }
+  
+  header .top-btnn{
+    display: none;
+  }
+  
 }
+
 
 @media (max-width: 470px) {
   :root {
     --h1-font: 3rem;
     --h2-font: 2rem;
+  }
+
+  .main-content{
+    width:  350px;
+  }
+  .hero{
+    height: 100vh;
+    vertical-align: center;
+  }
+  .main-content h4{
+    width:  350px;
   }
 
   .about-img img {
