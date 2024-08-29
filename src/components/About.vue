@@ -24,5 +24,59 @@ export default {
 </script>
 
 <style scoped>
-/* Inclua seu CSS específico para a seção sobre aqui */
+.about {
+  background: var(--second-bg-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-img img {
+  width: 100%;
+  height: 550px;
+  max-width: 550px;
+  object-fit: cover;
+  box-shadow: 0 0 350px var(--main-color);
+  padding: 20px;
+  border-radius: 20px;
+
+
+}
+
+.about-text h2 {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-text h2 span {
+  font-size: 3rem;
+  color: var(--main-color);
+  display: block;
+  font-weight: 1000;
+
+  margin-top: 10px;
+}
+
+.exp-area {
+  margin-top: 20px;
+}
+
+.exp-area p {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.325rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.exp-area span {
+  color: var(--other-color);
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
 </style>

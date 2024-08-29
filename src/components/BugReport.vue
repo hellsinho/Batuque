@@ -43,17 +43,21 @@ export default {
   background: var(--bg-color);
   padding: 2rem;
   border-radius: 8px;
+
 }
 
 .contact-form .container {
   max-width: 600px;
   margin: 0 auto 120px auto;
+
 }
 
 .contact-form h1 {
   font-size: var(--h1-font);
   color: var(--text-color);
   margin-bottom: 4rem;
+  font-weight: bold;
+
 }
 
 .contact-form .form-group {
@@ -61,6 +65,7 @@ export default {
 }
 
 .contact-form label {
+
   font-size: 1.5rem;
   display: block;
   margin-bottom: 1rem;
