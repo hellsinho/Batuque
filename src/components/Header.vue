@@ -46,6 +46,7 @@ export default {
 </script>
 
 <style scoped>
+/* Estilos gerais do cabeçalho */
 header {
   position: fixed;
   width: 100%;
@@ -60,6 +61,7 @@ header {
   background: var(--bg-color); /* Para visibilidade */
 }
 
+/* Menu de navegação */
 .navlist {
   display: flex;
   align-items: center;
@@ -85,18 +87,21 @@ header {
   text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
 }
 
+/* Logo */
 .logo {
   max-width: 100px;
   height: auto;
   padding: 5px;
 }
 
+/* Ícone do menu */
 #menu-icon {
   font-size: 35px;
   cursor: pointer;
   display: none;
 }
 
+/* Botões superiores */
 .top-btnn {
   display: flex;
   align-items: center;
@@ -122,8 +127,62 @@ header {
   transform: scale(1.1);
 }
 
+/* Estilos para cabeçalho quando fixo */
 header.sticky {
   background: var(--bg-color);
   box-shadow: 0 .1rem 1rem rgb(0, 0, 0, .2);
 }
+
+/* Media Queries */
+
+/* Para telas até 950px */
+@media (max-width: 950px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    transition: all 0.5s ease;
+    overflow-y: auto;
+  }
+
+  .navlist a {
+    display: block;
+    padding: 17px;
+    font-size: 22px;
+  }
+
+  .navlist.active {
+    right: 0;
+  }
+
+  .top-btnn {
+    display: none; /* Opcional: ocultar botões em telas menores se necessário */
+  }
+}
+
+/* Para telas até 700px */
+@media (max-width: 700px) {
+  header {
+    padding: 0 8%;
+  }
+
+  header .top-btnn {
+    display: none;
+  }
+
+  .navlist {
+    width: 100%;
+  }
+}
+
+
 </style>
