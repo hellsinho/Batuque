@@ -4,187 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
     <title>Batuque</title>
 
-    <!-- box icons link -->
+    <!-- Boxicons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-    <!-- remix icons link -->
+    <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <!-- google fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-
 </head>
 
 <body>
-    <!-- header -->
-    <header>
-        <a href="#" class="logo"><img src="img/logo.svg" alt="batuque-sobre-baquetas-cruzadas" width="100px"></span></a>
+<div id="app"></div>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
-
-        <ul class="navlist">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#services">Demonstração</a></li>
-            <li><a href="#portifolio">Tecnologias</a></li>
-        </ul>
-
-        <div class="top-btnn">
-            <a href="#contact" class="h-btn">contate-nos</a>
-        </div>
-    </header>
-
-    <!-- hero -->
-    <section class="hero" id="home">
-        <div class="main-content" data-aos="fade-in">
-            <h1><span>BATUQUE</span></h1>
-            <h4>A sua bateria de realidade aumentada para batucar em qualquer lugar</h4>
-            <p>Desenvolva suas habilidades rítmicas de forma lúdica através     de módulos de diferentes níveis, tudo com apenas uma câmera e em um ambiente confortável. E o melhor: poderá levar sua bateria para qualquer lugar com muito mais facilidade.</p>
-        </div>
-        <div class="social">
-            <a href="#"><i class="ri-facebook-fill"></i></a>
-            <a href="#"><i class="ri-instagram-fill"></i></a>
-            <a href="#"><i class="ri-twitter-x-fill"></i></a>
-            <a href="#"><i class="ri-youtube-fill"></i></a>
-        </div>
-
-        <div class="main-btn">
-            <a href="#" class="btn">Conheça a Batuque</a>
-            <a href="#" class="btn btn2">Saiba mais</a>
-        </div>
-    </section>
-
-    <!-- about -->
-
-    <section class="about" id="about">
-        <div class="about-img" data-aos="zoom-in-down">
-            <img src="img/logo.svg" alt="">
-        </div>
-        <div class="about-text" data-aos="zoom-in-up">
-            <h2>Sobre a Batuque<br><span>A bateria de realidade aumentada
-
-                </span></h2>
-            <div class="exp-area">
-                <p>A Batuque se trata de uma bateria de realidade aumentada com foco na usabilidade e acessibilidade, visando proporcionar a melhor experiência possível para aqueles que desejam aprender a tocar bateria, mas não possuem recursos para adquirir os equipamentos tradicionais.</p>
-                <span>
-                    Nosso grande diferencial está no fato de sermos hardwareless, ou seja, não se faz necessário o uso
-                    de sensores ou qualquer outro tipo de aparelho para usufruir da nossa aplicação. Desta forma, você
-                    somente precisa de um lugar confortável e a câmera de seu aparelho para batucar conosco.
-                </span>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- services -->
-    <section class="services" id="services">
-        <div class="center-text" data-aos="fade-down">
-            <h2>DEMONSTRAÇÃO</h2>
-        </div>
-        <div class="services-content" data-aos="zoom-in-up">
-            <div class="box">
-                  <iframe width="600" height="400" src="https://www.youtube.com/embed/9Pk4ppoRDX8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop" allowfullscreen></iframe>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Resources -->
-    <section class="resources" id="resources">
-        <div class="center-text" data-aos="fade-down">
-            <h2>Tecnologias <span>utilizadas</span></h2>
-        </div>
-        <div class="services-content" data-aos="zoom-in-up">
-            <div class="box-services">
-                <div class="tecnologia">
-                    <img src="img/visao computacional.jpg" alt="serviço">
-                    <h3>Visão Computacional</h3>
-                    <p>Visão computacional é uma área da inteligência artificial que capacita computadores a entenderem o mundo visual por meio de algoritmos e modelos, permitindo o processamento e análise de imagens e vídeos para identificar padrões e objetos.  </p>
-                </div>
-                <a href="#">
-                    Saiba mais
-                    <i class="ri-arrow-right-line"></i>
-                </a>
-            </div>
-            <div class="box-services">
-                <div class="tecnologia">
-                    <img src="img/realidade aumentada.jpg" alt="serviço">
-                    <h3>Realidade Aumentada</h3>
-                    <p>A realidade aumentada (RA) mescla o mundo físico com elementos virtuais, gerando uma experiência imersiva. Utilizando dispositivos como smartphones, a RA superpõe informações digitais ao ambiente real. </p>
-                </div>
-                <a href="#">
-                    Saiba mais
-                    <i class="ri-arrow-right-line"></i>
-                </a>
-            </div>
-            <div class="box-services">
-                <div class="tecnologia">
-                    <img src="img/openccv.png" alt="serviço">
-                    <h3>OpenCV</h3>
-                    <p>O OpenCV é uma biblioteca de código aberto para visão computacional, com algoritmos e ferramentas para processamento de imagem e vídeo. Ele simplifica o desenvolvimento de aplicações nesta área, oferecendo funcionalidades desde detecção de bordas até reconhecimento de objetos. </p>
-                </div>
-                <a href="#">
-                    Saiba mais
-                    <i class="ri-arrow-right-line"></i>
-                </a>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- contact -->
-
-    <section class="contact" id="contact">
-        <div class="center-text" data-aos="fade-down">
-            <h2>Vamos entrar em <span>contato?</span></h2>
-            <div class="invite-text">
-                <span>Fique à vontade para deixar seu feedback sobre nosso produto!</span>
-            </div>
-        </div>
-
-
-        <div class="contact-form" data-aos="zoom-in-up">
-            <form action="">
-                <input type="text" placeholder="Seu nome" required>
-                <input type="email" placeholder="Endereço de e-mail" required>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Escreva aqui sua mensagem" required></textarea>
-                <input type="submit" name="" value="Enviar mensagem" class="send-btn">
-            </form>
-        </div>
-    </section>
-
-    <div class="footer">
-        <div class="copyright">
-            <p>2024 Batuque, All Rights Reserved</p>
-        </div>
-        <a href="#home" class="scroll-top">
-            <i class="ri-arrow-up-s-fill"></i>
-        </a>
-    </div>
-
-
-    <script src="js/script.js"></script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 300,
-            duration: 1400,
-        });
-    </script>
-
+<!-- Vue.js -->
+<script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

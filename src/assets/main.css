@@ -1,0 +1,54 @@
+@import './base.css';
+
+/*  vermelho */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text-color: #fff;
+  --bg-color: #1b1f24;
+  --second-bg-color: #22282f;
+  --main-color: #e71d1d;
+  --other-color: #d8dbe0;
+
+  --h1-font: 4.5rem;
+  --h2-font: 2.9rem;
+  --p-font: 1.2rem;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+
+section {
+  padding: 110px 16% 90px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px var(--main-color);
+  background: #2d343f;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--other-color);
+  font-size: 15px;
+}
+
