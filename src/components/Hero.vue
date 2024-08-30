@@ -181,12 +181,12 @@ export default {
 @media (max-width: 480px) {
   .hero {
     padding: 1rem;
-    height: auto; /* Permite que a altura se ajuste automaticamente */
-    margin-top: 80px; /* Garante que o conteúdo não fique escondido atrás do cabeçalho */
+    height: auto;
+    margin-top: 80px;
   }
 
   .main-content {
-    margin-top: 20px; /* Espaço para garantir que o texto não fique em cima do cabeçalho */
+    margin-top: 20px;
   }
 
   .main-content h1 {

@@ -94,7 +94,7 @@ export default {
 
   .about-text h2 {
     font-size: 1.5rem;
-    margin: 40px 0 20px; /* Ajustado para criar mais espaço acima e abaixo do título */
+    margin: 40px 0 20px;
   }
 
   .about-text h2 span {
@@ -112,12 +112,12 @@ export default {
 
 @media (max-width: 480px) {
   .about {
-    padding: 30px 3%; /* Ajustado para telas menores */
+    padding: 30px 3%;
   }
 
   .about-text h2 {
     font-size: 1.3rem;
-    margin: 30px 0 15px; /* Ajustado para criar mais espaço acima e abaixo do título */
+    margin: 30px 0 15px;
   }
 
   .about-text h2 span {

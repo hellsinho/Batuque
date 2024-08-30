@@ -9,7 +9,7 @@
 - **Interatividade:** Menu de navegação interativo que se adapta ao tamanho da tela e exibe opções de forma adequada em dispositivos menores.
 
 ### Exemplo Visual do Projeto
-![image](https://github.com/user-attachments/assets/cf248abc-ff0e-4cfe-b0a3-cff3b6cce70c)
+![image](https://github.com/user-attachments/assets/1b1918a3-1751-411e-a169-4df105350eed)
 
 ## ✔️ Técnicas e Tecnologias Utilizadas
 
