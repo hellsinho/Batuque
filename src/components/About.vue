@@ -1,7 +1,7 @@
 <template>
   <section class="about" id="about">
     <div class="about-img" data-aos="zoom-in-down">
-      <img src="/img/logo.svg" alt="">
+      <img src="/img/logo.svg" alt="Logo da Batuque">
     </div>
     <div class="about-text" data-aos="zoom-in-up">
       <h2>Sobre a Batuque<br><span>A bateria de realidade aumentada</span></h2>
@@ -14,6 +14,7 @@
     </div>
   </section>
 </template>
+
 
 <script>
 export default {
@@ -30,24 +31,23 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 1.5rem;
+  padding: 60px 8%;
+  box-sizing: border-box;
 }
 
 .about-img img {
   width: 100%;
-  height: 550px;
+  height: auto;
   max-width: 550px;
   object-fit: cover;
-  box-shadow: 0 0 350px var(--main-color);
+  box-shadow: 0 0 20px var(--main-color);
   padding: 20px;
   border-radius: 20px;
-
-
 }
 
 .about-text h2 {
   font-size: 1.8rem;
   line-height: 1.3;
-  margin-bottom: 20px;
   font-weight: bold;
 }
 
@@ -56,7 +56,6 @@ export default {
   color: var(--main-color);
   display: block;
   font-weight: 1000;
-
   margin-top: 10px;
 }
 
@@ -78,5 +77,61 @@ export default {
   font-size: 1.125rem;
   line-height: 1.6;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 5%; /* Ajustado para telas menores */
+  }
+
+  .about-img img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+    margin: 40px 0 20px; /* Ajustado para criar mais espaço acima e abaixo do título */
+  }
+
+  .about-text h2 span {
+    font-size: 2.5rem;
+  }
+
+  .exp-area p {
+    font-size: 1.2rem;
+  }
+
+  .exp-area span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 30px 3%; /* Ajustado para telas menores */
+  }
+
+  .about-text h2 {
+    font-size: 1.3rem;
+    margin: 30px 0 15px; /* Ajustado para criar mais espaço acima e abaixo do título */
+  }
+
+  .about-text h2 span {
+    font-size: 2rem;
+  }
+
+  .exp-area p {
+    font-size: 1rem;
+  }
+
+  .exp-area span {
+    font-size: 0.9rem;
+  }
+}
+
 
 </style>

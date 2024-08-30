@@ -50,6 +50,11 @@ export default {
 </script>
 
 <style scoped>
+.resources {
+  background-color: var(--second-bg-color);
+  padding: 2rem 0;
+}
+
 .center-text {
   text-align: center;
 }
@@ -59,80 +64,61 @@ export default {
   font-weight: bold;
 }
 
-.center-text .invite-text {
-  margin-top: 20px;
-}
-
-.center-text .invite-text span {
-  font-size: var(--p-font);
-  color: var(--other-color);
-}
-
-.resources{
-  background-color: var(--second-bg-color);
+.center-text h2 span {
+  color: var(--main-color);
+  font-size: var(--h2-font);
+  font-weight: bold;
 }
 
 .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-  align-items: stretch;
-  gap: 2.3rem;
-  margin-top: 4.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.box {
+.box-services {
   background: #2d343f;
   border-radius: 28px;
   border: 1px solid transparent;
   box-shadow: 0 0 5px var(--main-color);
   transition: all .5s ease;
   cursor: pointer;
-}
-
-.box-services{
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-
-  padding: 80px 40px 66px;
-  background: #2d343f;
-  border-radius: 28px;
-  border: 1px solid transparent;
-  box-shadow: 0 0 5px var(--main-color);
-  transition: all .5s ease;
-  cursor: pointer;
+  align-items: center;
+  text-align: center;
 }
 
 .box-services img {
-  margin-bottom: 20px;
-  height: 200px;
-  width: 200px;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
   border-radius: 28px;
-  border: 1px solid transparent;
   box-shadow: 0 0 5px var(--main-color);
+  margin-bottom: 1rem;
 }
 
 .box-services h3 {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .box-services p {
   font-size: var(--p-font);
   font-weight: 400;
   color: var(--other-color);
-  line-height: 30px;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .box-services a {
-  display: inline-block;
-  font-size: 22px;
-  line-height: 1.273em;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.125rem;
   font-weight: 700;
-  padding: 7px 0;
   color: var(--text-color);
   border-bottom: 2px solid #5d6c83;
   transition: all .5s ease;
@@ -140,9 +126,9 @@ export default {
 
 .box-services i {
   vertical-align: middle;
-  font-size: 25px;
+  font-size: 1.25rem;
   color: var(--main-color);
-  margin-left: 5px;
+  margin-left: 0.5rem;
 }
 
 .box-services a:hover {
@@ -152,13 +138,5 @@ export default {
 .box-services:hover {
   border: 1px solid var(--main-color);
   transform: translateY(-5px) scale(1.03);
-}
-
-.box iframe{
-  width: 100%;
-  height: 38rem;
-  border-radius: 28px;
-  border: 1px solid transparent;
-
 }
 </style>

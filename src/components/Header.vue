@@ -149,9 +149,14 @@ header.sticky {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background: var(--bg-color);
     transition: all 0.5s ease;
     overflow-y: auto;
+  }
+
+  .navlist li {
+    margin: 10px 0;
   }
 
   .navlist a {
@@ -165,7 +170,7 @@ header.sticky {
   }
 
   .top-btnn {
-    display: none; /* Opcional: ocultar botões em telas menores se necessário */
+    display: none; /* Ocultar botões em telas menores */
   }
 }
 
@@ -175,14 +180,18 @@ header.sticky {
     padding: 0 8%;
   }
 
-  header .top-btnn {
-    display: none;
+  .logo img {
+    width: 80px; /* Reduzir tamanho do logo */
   }
 
   .navlist {
     width: 100%;
   }
-}
 
+  .navlist a {
+    padding: 15px;
+    font-size: 20px; /* Ajustar o tamanho do texto */
+  }
+}
 
 </style>

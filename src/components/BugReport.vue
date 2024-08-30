@@ -43,21 +43,21 @@ export default {
   background: var(--bg-color);
   padding: 2rem;
   border-radius: 8px;
-
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-form .container {
   max-width: 600px;
-  margin: 0 auto 120px auto;
-
+  margin: 0 auto;
 }
 
 .contact-form h1 {
   font-size: var(--h1-font);
   color: var(--text-color);
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   font-weight: bold;
-
+  text-align: center;
 }
 
 .contact-form .form-group {
@@ -65,10 +65,9 @@ export default {
 }
 
 .contact-form label {
-
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--text-color);
 }
 
@@ -80,6 +79,12 @@ export default {
   border-radius: 8px;
   background: var(--bg-color);
   color: var(--text-color);
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
 }
 
 .contact-form input::placeholder,
@@ -97,12 +102,15 @@ export default {
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.5s ease;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .contact-form button:hover {
   background: transparent;
   color: var(--main-color);
   box-shadow: 0 0 20px var(--main-color);
-  cursor: pointer;
 }
 </style>

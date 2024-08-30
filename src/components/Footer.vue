@@ -19,32 +19,46 @@ export default {
 
 <style scoped>
 .footer {
-  padding: 22px;
   background: var(--bg-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.footer .copyright p {
+  font-size: 0.875rem;
+  color: var(--other-color);
+  text-align: center;
+  margin: 0;
+}
+
+.scroll-top {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--main-color);
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-color);
+  font-size: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.footer {
-  padding: 18px 8%;
-}
-
-.copyright p {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--other-color);
+.scroll-top:hover {
+  background: var(--other-color);
+  transform: scale(1.1);
 }
 
 .scroll-top i {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--main-color);
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  color: var(--text-color);
-  font-size: 27px;
-}</style>
+  margin: 0;
+}
+</style>
