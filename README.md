@@ -1,23 +1,30 @@
-# Batuque
+## 🌐 [English Version of README](README_EN.md)
 
-**Batuque** é um site de demonstração para um projeto que utiliza Vue.js. O projeto apresenta uma série de seções e funcionalidades que destacam a aplicação de tecnologias modernas e práticas de desenvolvimento web.
+# Batuque-Web
+
+**Batuque-Web** é o site de demonstração para o projeto Batuque. Ele exibe uma série de seções e funcionalidades que ressaltam a aplicação de tecnologias modernas e práticas de desenvolvimento web. Este projeto apresenta a inovadora bateria de realidade aumentada Batuque, oferecendo uma experiência envolvente e acessível para o aprendizado e prática de bateria sem a necessidade de equipamentos tradicionais.
 
 ## 🔨 Funcionalidades do Projeto
 
 - **Cabeçalho Fixo:** Um cabeçalho fixo com um menu de navegação e botões de contato e bug report.
 - **Responsividade:** Design responsivo que se adapta a diferentes tamanhos de tela, garantindo uma boa experiência em dispositivos móveis.
 - **Interatividade:** Menu de navegação interativo que se adapta ao tamanho da tela e exibe opções de forma adequada em dispositivos menores.
+- **Animações e Transições:** Animações sutis e transições suaves para melhorar a experiência do usuário.
+- **Efeitos de Rolagem Animados:** Utilização da biblioteca AOS para adicionar animações quando os elementos entram em vista durante a rolagem da página.
+- **Integração de Ícones:** Utilização de ícones para enriquecer a interface e facilitar a navegação.
 
 ### Exemplo Visual do Projeto
-![image](https://github.com/user-attachments/assets/1b1918a3-1751-411e-a169-4df105350eed)
+![Exemplo Visual](https://github.com/user-attachments/assets/1479893c-f58b-433b-96f6-7fdcc1fd14be)
 
 ## ✔️ Técnicas e Tecnologias Utilizadas
 
 - **Vue.js:** Framework JavaScript para construção da interface.
 - **Vite:** Ferramenta de construção para desenvolvimento rápido.
+- **AOS (Animate On Scroll):** Biblioteca para adicionar animações aos elementos durante a rolagem da página.
 - **Boxicons & Remix Icons:** Ícones para melhorar a UI.
 - **Google Fonts:** Fonte personalizada para uma aparência moderna.
 - **CSS Custom Properties:** Variáveis CSS para fácil personalização de cores e estilos.
+- **CSS Animations:** Utilização de animações CSS para efeitos visuais.
 
 ## 📁 Estrutura do Projeto
 
@@ -56,7 +63,6 @@
         - `Services.vue`: Componente de serviços.
         - `Test.vue`: Componente de teste.
     - `main.js`: Arquivo principal de inicialização da aplicação Vue.
-- **take_folder_code_and_names.py**: Script Python para gerar listagens de diretórios e arquivos.
 - **vite.config.js**: Configuração do Vite para o projeto.
 
 ## 🛠️ Abrir e Rodar o Projeto
@@ -92,4 +98,3 @@ Para iniciar o projeto localmente, siga os passos abaixo:
 ## 🌐 Deploy
 
 O projeto está hospedado no Vercel. Você pode acessá-lo através do seguinte link: [batuque.vercel.app](https://batuque.vercel.app)
-    

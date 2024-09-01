@@ -83,7 +83,7 @@ export default {
   .about {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 40px 5%; /* Ajustado para telas menores */
+    padding: 40px 5%;
   }
 
   .about-img img {

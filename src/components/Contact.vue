@@ -1,49 +1,86 @@
 <template>
   <section class="contact" id="contact">
-    <div class="center-text" data-aos="fade-down">
-      <h2>Vamos entrar em <span>contato?</span></h2>
-      <div class="invite-text">
-        <span>Fique à vontade para deixar seu feedback sobre nosso produto!</span>
+    <div class="contact-container">
+      <div class="center-text" data-aos="fade-down">
+        <h2>Vamos entrar em <span class="bold-text">contato</span></h2>
+        <div class="invite-text">
+          <span>Fique à vontade para deixar seu feedback sobre nosso produto!</span>
+        </div>
       </div>
-    </div>
 
-    <div class="contact-form" data-aos="zoom-in-up">
-      <form action="">
-        <input type="text" placeholder="Seu nome" required>
-        <input type="email" placeholder="Endereço de e-mail" required>
-        <textarea placeholder="Escreva aqui sua mensagem" required></textarea>
-        <input type="submit" value="Enviar mensagem" class="send-btn">
-      </form>
+      <div class="contact-form" data-aos="zoom-in-up">
+        <form @submit.prevent="submitForm">
+          <input type="text" placeholder="Seu nome" required>
+          <input type="email" placeholder="Endereço de e-mail" required>
+          <textarea placeholder="Escreva aqui sua mensagem" required></textarea>
+          <input type="submit" value="Enviar mensagem" class="send-btn">
+        </form>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  mounted() {
-    // Adicione lógica JavaScript se necessário
+  methods: {
+    submitForm() {
+      // Adicione a lógica para o envio do formulário, se necessário
+      console.log("Formulário enviado!");
+    }
   }
 };
 </script>
 
 <style scoped>
+
 .contact {
-  background-color: #22282f;
+  background-color: var(--second-bg-color);
   padding: 2rem;
+}
+
+.contact-container {
+  background-color: var(--bg-color);
+  border-radius: 80px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .center-text {
   text-align: center;
+  position: relative;
 }
 
 .center-text h2 {
   font-size: var(--h2-font);
   font-weight: bold;
   color: var(--text-color);
+  margin-bottom: 1rem;
+  position: relative;
 }
 
-.center-text h2 span {
+.center-text h2 .bold-text {
+  font-weight: bold;
   color: var(--main-color);
+}
+
+.center-text h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.5s ease;
+  max-width: 50%;
+}
+
+.center-text h2:hover::after {
+  width: 100%;
 }
 
 .center-text .invite-text {

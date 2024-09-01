@@ -1,19 +1,19 @@
 <template>
-  <header>
-    <a href="#" class="logo">
+  <header ref="header" class="flash-background">
+    <a href="#" class="logo" data-aos="fade-down" data-aos-delay="100">
       <img src="/img/logo.svg" alt="batuque-sobre-baquetas-cruzadas" width="100px">
     </a>
 
-    <div class="bx bx-menu" id="menu-icon"></div>
+    <div class="bx bx-menu" id="menu-icon" data-aos="fade-down" data-aos-delay="200"></div>
 
-    <ul class="navlist">
+    <ul class="navlist" data-aos="fade-down" data-aos-delay="300">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">Sobre</a></li>
       <li><a href="#services">Demonstração</a></li>
       <li><a href="#resources">Tecnologias</a></li>
     </ul>
 
-    <div class="top-btnn">
+    <div class="top-btnn" data-aos="fade-down" data-aos-delay="400">
       <a href="#contact" class="h-btn">Contate-nos</a>
       <a href="#contact-form" class="h-btn">Reportar Bugs</a>
     </div>
@@ -23,11 +23,15 @@
 <script>
 export default {
   mounted() {
-    const header = document.querySelector("header");
+    const header = this.$refs.header;
 
-    window.addEventListener("scroll", function () {
-      header.classList.toggle("sticky", window.scrollY > 120);
-    });
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      header.classList.toggle("sticky", scrollY > 120);
+      header.classList.toggle("scrolled", scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     const menu = document.querySelector('#menu-icon');
     const navlist = document.querySelector('.navlist');
@@ -41,12 +45,39 @@ export default {
       menu.classList.remove('bx-x');
       navlist.classList.remove('active');
     };
+
+
+    this.flashBackground();
+  },
+  methods: {
+    flashBackground() {
+      const header = this.$refs.header;
+      const flash = document.createElement('div');
+      flash.classList.add('flash-background');
+      header.appendChild(flash);
+
+      setTimeout(() => {
+        header.removeChild(flash);
+      }, 300);
+    }
   }
 };
 </script>
 
+
 <style scoped>
-/* Estilos gerais do cabeçalho */
+@keyframes backgroundFlash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -58,10 +89,21 @@ header {
   justify-content: space-between;
   padding: 10px 15%;
   transition: all 0.5s ease;
-  background: var(--bg-color); /* Para visibilidade */
+  background: var(--bg-color);
+  opacity: 1;
+  overflow: hidden;
 }
 
-/* Menu de navegação */
+header.sticky {
+  background: var(--bg-color);
+  box-shadow: 0 .1rem 1rem rgb(0, 0, 0, .2);
+}
+
+header.scrolled {
+  transform: translateY(-10px);
+  opacity: 0.9;
+}
+
 .navlist {
   display: flex;
   align-items: center;
@@ -87,21 +129,18 @@ header {
   text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
 }
 
-/* Logo */
 .logo {
   max-width: 100px;
   height: auto;
   padding: 5px;
 }
 
-/* Ícone do menu */
 #menu-icon {
   font-size: 35px;
   cursor: pointer;
   display: none;
 }
 
-/* Botões superiores */
 .top-btnn {
   display: flex;
   align-items: center;
@@ -127,15 +166,21 @@ header {
   transform: scale(1.1);
 }
 
-/* Estilos para cabeçalho quando fixo */
-header.sticky {
-  background: var(--bg-color);
-  box-shadow: 0 .1rem 1rem rgb(0, 0, 0, .2);
+.flash-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  animation: backgroundFlash 0.3s forwards;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Media Queries */
 
-/* Para telas até 950px */
 @media (max-width: 950px) {
   #menu-icon {
     display: block;
@@ -170,18 +215,17 @@ header.sticky {
   }
 
   .top-btnn {
-    display: none; /* Ocultar botões em telas menores */
+    display: none;
   }
 }
 
-/* Para telas até 700px */
 @media (max-width: 700px) {
   header {
     padding: 0 8%;
   }
 
   .logo img {
-    width: 80px; /* Reduzir tamanho do logo */
+    width: 80px;
   }
 
   .navlist {
@@ -190,7 +234,7 @@ header.sticky {
 
   .navlist a {
     padding: 15px;
-    font-size: 20px; /* Ajustar o tamanho do texto */
+    font-size: 20px;
   }
 }
 
