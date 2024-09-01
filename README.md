@@ -1,3 +1,5 @@
+## 🌐 [English Version of README](README_EN.md)
+
 # Batuque-Web
 
 **Batuque-Web** é o site de demonstração para o projeto Batuque. Ele exibe uma série de seções e funcionalidades que ressaltam a aplicação de tecnologias modernas e práticas de desenvolvimento web. Este projeto apresenta a inovadora bateria de realidade aumentada Batuque, oferecendo uma experiência envolvente e acessível para o aprendizado e prática de bateria sem a necessidade de equipamentos tradicionais.
