@@ -63,7 +63,6 @@
         - `Services.vue`: Componente de serviços.
         - `Test.vue`: Componente de teste.
     - `main.js`: Arquivo principal de inicialização da aplicação Vue.
-- **take_folder_code_and_names.py**: Script Python para gerar listagens de diretórios e arquivos.
 - **vite.config.js**: Configuração do Vite para o projeto.
 
 ## 🛠️ Abrir e Rodar o Projeto
