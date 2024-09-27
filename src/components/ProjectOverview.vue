@@ -116,12 +116,12 @@ export default {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  width: 100%; /* Para garantir que o vídeo não exceda o container */
+  width: 100%;
 }
 
 iframe {
-  max-width: 100%; /* Ajuste para responsividade */
-  height: auto; /* Para manter a proporção */
+  max-width: 100%;
+  height: auto;
 }
 
 .repository {
@@ -138,7 +138,7 @@ iframe {
   padding: 10px 20px;
   border-radius: 8px;
   transition: all 0.3s ease;
-  display: inline-block; /* Para garantir que a largura se ajuste ao conteúdo */
+  display: inline-block;
 }
 
 .repo-link:hover {
@@ -147,7 +147,12 @@ iframe {
 }
 
 .team {
-  margin-top: 2rem; /* Adiciona um espaço entre repositório e equipe */
+  margin-top: 2rem;
+}
+
+.team h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .team-list {
@@ -195,7 +200,7 @@ iframe {
   }
 
   iframe {
-    max-width: 100%; /* Ajusta a largura do iframe */
+    max-width: 100%;
     max-height: 400px;
   }
 
@@ -216,7 +221,7 @@ iframe {
 
   iframe {
     max-width: 100%;
-    max-height: auto; /* Mantém a proporção */
+    max-height: auto;
   }
 
   .team-member-image {
@@ -229,8 +234,16 @@ iframe {
   }
 
   .repo-link {
-    font-size: 1.3rem; /* Ajusta o tamanho da fonte do link */
-    padding: 8px 16px; /* Ajusta o padding */
+    font-size: 1.3rem;
+    padding: 8px 16px;
   }
 }
+
+@media (max-width: 430px) {
+  .team-list li {
+    flex-direction: column;
+  }
+}
+
+
 </style>
