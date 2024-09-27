@@ -1,11 +1,14 @@
 <template>
   <header ref="header" class="flash-background">
+    <!-- Logo -->
     <a href="#" class="logo" data-aos="fade-down" data-aos-delay="100">
       <img src="/img/logo.svg" alt="batuque-sobre-baquetas-cruzadas" width="100px">
     </a>
 
+    <!-- Menu Icon -->
     <div class="bx bx-menu" id="menu-icon" data-aos="fade-down" data-aos-delay="200"></div>
 
+    <!-- Navigation Menu -->
     <ul class="navlist" data-aos="fade-down" data-aos-delay="300">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">Sobre</a></li>
@@ -13,6 +16,7 @@
       <li><a href="#resources">Tecnologias</a></li>
     </ul>
 
+    <!-- Buttons -->
     <div class="top-btnn" data-aos="fade-down" data-aos-delay="400">
       <a href="#contact" class="h-btn">Contate-nos</a>
       <a href="#contact-form" class="h-btn">Reportar Bugs</a>
@@ -25,27 +29,28 @@ export default {
   mounted() {
     const header = this.$refs.header;
 
+    // Add sticky class on scroll
     const handleScroll = () => {
       const scrollY = window.scrollY;
       header.classList.toggle("sticky", scrollY > 120);
       header.classList.toggle("scrolled", scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
 
+    // Toggle Menu
     const menu = document.querySelector('#menu-icon');
     const navlist = document.querySelector('.navlist');
 
     menu.onclick = () => {
-      menu.classList.toggle('bx-x');
-      navlist.classList.toggle('active');
+      menu.classList.toggle('bx-x'); // Change icon to 'X'
+      navlist.classList.toggle('active'); // Show/Hide the nav menu
     };
 
+    // Close menu when scrolling
     window.onscroll = () => {
       menu.classList.remove('bx-x');
       navlist.classList.remove('active');
     };
-
 
     this.flashBackground();
   },
@@ -64,8 +69,8 @@ export default {
 };
 </script>
 
-
 <style scoped>
+/* Animation for background flash */
 @keyframes backgroundFlash {
   0% {
     opacity: 0;
@@ -135,6 +140,7 @@ header.scrolled {
   padding: 5px;
 }
 
+/* Menu Icon */
 #menu-icon {
   font-size: 35px;
   cursor: pointer;
@@ -180,16 +186,17 @@ header.scrolled {
 }
 
 /* Media Queries */
-
 @media (max-width: 950px) {
+  /* Show the menu icon */
   #menu-icon {
     display: block;
   }
 
+  /* Hidden menu, slides in when active */
   .navlist {
     position: absolute;
     top: 100%;
-    right: -100%;
+    right: -100%; /* Offscreen initially */
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -200,6 +207,11 @@ header.scrolled {
     overflow-y: auto;
   }
 
+  /* When active, show the menu */
+  .navlist.active {
+    right: 0;
+  }
+
   .navlist li {
     margin: 10px 0;
   }
@@ -208,10 +220,6 @@ header.scrolled {
     display: block;
     padding: 17px;
     font-size: 22px;
-  }
-
-  .navlist.active {
-    right: 0;
   }
 
   .top-btnn {
@@ -228,14 +236,9 @@ header.scrolled {
     width: 80px;
   }
 
-  .navlist {
-    width: 100%;
-  }
-
   .navlist a {
     padding: 15px;
     font-size: 20px;
   }
 }
-
 </style>
