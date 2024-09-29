@@ -9,7 +9,7 @@
         <iframe
             width="800"
             height="500"
-            src="https://www.youtube.com/embed/CÓDIGO_DO_VIDEO"
+            src="https://www.youtube.com/watch?v=8KPu5xcEIwI&feature=youtu.be"
             title="Vídeo sobre o projeto Batuque"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -19,7 +19,9 @@
     </div>
 
     <div class="repository" data-aos="fade-up" data-aos-delay="400">
-      <a href="https://github.com/Batuque-ofc/Batuque-ofc" target="_blank" class="repo-link">Acesse o repositório no GitHub</a>
+      <a href="https://github.com/Batuque-ofc/Batuque-ofc" target="_blank" class="repo-link">
+        Acesse o repositório no GitHub
+      </a>
     </div>
 
     <div class="team" data-aos="fade-up" data-aos-delay="500">
@@ -119,11 +121,6 @@ export default {
   width: 100%;
 }
 
-iframe {
-  max-width: 100%;
-  height: auto;
-}
-
 .repository {
   margin-top: 3rem;
   text-align: center;
@@ -187,7 +184,6 @@ iframe {
   .main-content h1 {
     font-size: 3.5rem;
   }
-
   iframe {
     max-width: 900px;
     max-height: 450px;
@@ -198,17 +194,14 @@ iframe {
   .main-content h1 {
     font-size: 3rem;
   }
-
   iframe {
     max-width: 100%;
     max-height: 400px;
   }
-
   .team-member-image {
     width: 120px;
     height: 120px;
   }
-
   .team-list strong {
     font-size: 1.4rem;
   }
@@ -218,21 +211,17 @@ iframe {
   .main-content h1 {
     font-size: 2.5rem;
   }
-
   iframe {
     max-width: 100%;
-    max-height: auto;
+    max-height: 20rem;
   }
-
   .team-member-image {
     width: 100px;
     height: 100px;
   }
-
   .team-list strong {
     font-size: 1.2rem;
   }
-
   .repo-link {
     font-size: 1.3rem;
     padding: 8px 16px;
@@ -243,7 +232,9 @@ iframe {
   .team-list li {
     flex-direction: column;
   }
+  iframe {
+    max-width: 100%;
+    max-height: 15rem;
+  }
 }
-
-
 </style>
