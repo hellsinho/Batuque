@@ -1,14 +1,15 @@
 <template>
   <header ref="header" class="flash-background">
-    <!-- Logo -->
     <a href="#" class="logo" data-aos="fade-down" data-aos-delay="100">
       <img src="/img/logo.svg" alt="batuque-sobre-baquetas-cruzadas" width="100px">
     </a>
 
-    <!-- Menu Icon -->
-    <div class="bx bx-menu" id="menu-icon" data-aos="fade-down" data-aos-delay="200"></div>
+    <div id="menu-icon" class="menu-icon" data-aos="fade-down" data-aos-delay="200">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
 
-    <!-- Navigation Menu -->
     <ul class="navlist" data-aos="fade-down" data-aos-delay="300">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">Sobre</a></li>
@@ -16,7 +17,6 @@
       <li><a href="#resources">Tecnologias</a></li>
     </ul>
 
-    <!-- Buttons -->
     <div class="top-btnn" data-aos="fade-down" data-aos-delay="400">
       <a href="#contact" class="h-btn">Contate-nos</a>
       <a href="#contact-form" class="h-btn">Reportar Bugs</a>
@@ -29,7 +29,6 @@ export default {
   mounted() {
     const header = this.$refs.header;
 
-    // Add sticky class on scroll
     const handleScroll = () => {
       const scrollY = window.scrollY;
       header.classList.toggle("sticky", scrollY > 120);
@@ -37,18 +36,16 @@ export default {
     };
     window.addEventListener("scroll", handleScroll);
 
-    // Toggle Menu
     const menu = document.querySelector('#menu-icon');
     const navlist = document.querySelector('.navlist');
 
     menu.onclick = () => {
-      menu.classList.toggle('bx-x'); // Change icon to 'X'
-      navlist.classList.toggle('active'); // Show/Hide the nav menu
+      menu.classList.toggle('active');
+      navlist.classList.toggle('active');
     };
 
-    // Close menu when scrolling
     window.onscroll = () => {
-      menu.classList.remove('bx-x');
+      menu.classList.remove('active');
       navlist.classList.remove('active');
     };
 
@@ -70,24 +67,16 @@ export default {
 </script>
 
 <style scoped>
-/* Animation for background flash */
 @keyframes backgroundFlash {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0; }
 }
 
 header {
   position: fixed;
   width: 100%;
   top: 0;
-  right: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -95,12 +84,9 @@ header {
   padding: 10px 15%;
   transition: all 0.5s ease;
   background: var(--bg-color);
-  opacity: 1;
-  overflow: hidden;
 }
 
 header.sticky {
-  background: var(--bg-color);
   box-shadow: 0 .1rem 1rem rgb(0, 0, 0, .2);
 }
 
@@ -111,7 +97,6 @@ header.scrolled {
 
 .navlist {
   display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -140,11 +125,30 @@ header.scrolled {
   padding: 5px;
 }
 
-/* Menu Icon */
-#menu-icon {
-  font-size: 35px;
-  cursor: pointer;
+.menu-icon {
   display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  height: 4px;
+  width: 30px;
+  background-color: var(--other-color);
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+.menu-icon.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .top-btnn {
@@ -185,18 +189,15 @@ header.scrolled {
   pointer-events: none;
 }
 
-/* Media Queries */
-@media (max-width: 950px) {
-  /* Show the menu icon */
-  #menu-icon {
-    display: block;
+@media (max-width: 1075px) {
+  .menu-icon {
+    display: flex;
   }
 
-  /* Hidden menu, slides in when active */
   .navlist {
     position: absolute;
     top: 100%;
-    right: -100%; /* Offscreen initially */
+    right: -100%;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -205,9 +206,9 @@ header.scrolled {
     background: var(--bg-color);
     transition: all 0.5s ease;
     overflow-y: auto;
+    z-index: 999; /* Adicionado para garantir que apareça acima */
   }
 
-  /* When active, show the menu */
   .navlist.active {
     right: 0;
   }

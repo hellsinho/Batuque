@@ -9,7 +9,7 @@
         <iframe
             width="800"
             height="500"
-            src="https://www.youtube.com/watch?v=8KPu5xcEIwI&feature=youtu.be"
+            src="https://www.youtube.com/embed/8KPu5xcEIwI"
             title="Vídeo sobre o projeto Batuque"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
