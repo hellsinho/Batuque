@@ -6,7 +6,7 @@
 
 ## 🔨 Funcionalidades do Projeto
 
-- **Cabeçalho Fixo:** Um cabeçalho fixo com um menu de navegação e botões de contato e bug report.
+- **Cabeçalho Fixo:** Um cabeçalho fixo com um menu de navegação e botões de contato e reportar bugs.
 - **Responsividade:** Design responsivo que se adapta a diferentes tamanhos de tela, garantindo uma boa experiência em dispositivos móveis.
 - **Interatividade:** Menu de navegação interativo que se adapta ao tamanho da tela e exibe opções de forma adequada em dispositivos menores.
 - **Animações e Transições:** Animações sutis e transições suaves para melhorar a experiência do usuário.
@@ -14,7 +14,9 @@
 - **Integração de Ícones:** Utilização de ícones para enriquecer a interface e facilitar a navegação.
 
 ### Exemplo Visual do Projeto
-![Exemplo Visual](https://github.com/user-attachments/assets/1479893c-f58b-433b-96f6-7fdcc1fd14be)
+
+![chrome-capture-2024-9-29 (1)](https://github.com/user-attachments/assets/68537267-d925-4154-859b-60dd55c12999)
+![chrome-capture-2024-9-29](https://github.com/user-attachments/assets/9f581bbe-060a-40c7-9c27-6359345e4085)
 
 ## ✔️ Técnicas e Tecnologias Utilizadas
 
@@ -43,6 +45,13 @@
         - `macro-eye-iris.jpg`: Imagem adicional.
         - `opencv_logo.png`: Logotipo OpenCV.
         - `realidade_aumentada.jpg`: Imagem adicional.
+        - **members/**
+            - `Anthonny.jpg`
+            - `Edson.jpg`
+            - `Felipe.jpg`
+            - `Gabriel.jpg`
+            - `Helson.jpg`
+            - `Rian.jpg`
         - `site.webmanifest`: Manifesto do site.
         - `visao_computacional.jpg`: Imagem adicional.
 - **src/**
@@ -58,7 +67,7 @@
         - `Footer.vue`: Componente de rodapé.
         - `Header.vue`: Componente de cabeçalho.
         - `Hero.vue`: Componente de seção principal.
-        - **icons/**: Ícones para o projeto.
+        - `ProjectOverview.vue`: Componente de visão geral do projeto.
         - `Resources.vue`: Componente de recursos.
         - `Services.vue`: Componente de serviços.
         - `Test.vue`: Componente de teste.
@@ -97,4 +106,4 @@ Para iniciar o projeto localmente, siga os passos abaixo:
 
 ## 🌐 Deploy
 
-O projeto está hospedado no Vercel. Você pode acessá-lo através do seguinte link: [batuque.vercel.app](https://batuque.vercel.app)
+O projeto está hospedado no Netlify e pode ser acessado no seguinte link: [batuqueofc.netlify.app](https://batuqueofc.netlify.app)

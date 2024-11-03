@@ -3,6 +3,7 @@
     <Header />
     <Hero />
     <About />
+    <ProjectOverview />
     <Services />
     <Resources />
     <BugReport />
@@ -20,12 +21,14 @@ import Resources from './components/Resources.vue';
 import BugReport from './components/BugReport.vue';
 import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
+import ProjectOverview from './components/ProjectOverview.vue';
 
 export default {
   components: {
     Header,
     Hero,
     About,
+    ProjectOverview,
     Services,
     Resources,
     BugReport,

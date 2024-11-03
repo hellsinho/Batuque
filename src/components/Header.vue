@@ -4,7 +4,11 @@
       <img src="/img/logo.svg" alt="batuque-sobre-baquetas-cruzadas" width="100px">
     </a>
 
-    <div class="bx bx-menu" id="menu-icon" data-aos="fade-down" data-aos-delay="200"></div>
+    <div id="menu-icon" class="menu-icon" data-aos="fade-down" data-aos-delay="200">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
 
     <ul class="navlist" data-aos="fade-down" data-aos-delay="300">
       <li><a href="#home">Home</a></li>
@@ -30,22 +34,20 @@ export default {
       header.classList.toggle("sticky", scrollY > 120);
       header.classList.toggle("scrolled", scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
 
     const menu = document.querySelector('#menu-icon');
     const navlist = document.querySelector('.navlist');
 
     menu.onclick = () => {
-      menu.classList.toggle('bx-x');
+      menu.classList.toggle('active');
       navlist.classList.toggle('active');
     };
 
     window.onscroll = () => {
-      menu.classList.remove('bx-x');
+      menu.classList.remove('active');
       navlist.classList.remove('active');
     };
-
 
     this.flashBackground();
   },
@@ -64,25 +66,17 @@ export default {
 };
 </script>
 
-
 <style scoped>
 @keyframes backgroundFlash {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0;
-  }
+  0% { opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0; }
 }
 
 header {
   position: fixed;
   width: 100%;
   top: 0;
-  right: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -90,12 +84,9 @@ header {
   padding: 10px 15%;
   transition: all 0.5s ease;
   background: var(--bg-color);
-  opacity: 1;
-  overflow: hidden;
 }
 
 header.sticky {
-  background: var(--bg-color);
   box-shadow: 0 .1rem 1rem rgb(0, 0, 0, .2);
 }
 
@@ -106,7 +97,6 @@ header.scrolled {
 
 .navlist {
   display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -135,10 +125,30 @@ header.scrolled {
   padding: 5px;
 }
 
-#menu-icon {
-  font-size: 35px;
-  cursor: pointer;
+.menu-icon {
   display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  height: 4px;
+  width: 30px;
+  background-color: var(--other-color);
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+.menu-icon.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .top-btnn {
@@ -179,11 +189,9 @@ header.scrolled {
   pointer-events: none;
 }
 
-/* Media Queries */
-
-@media (max-width: 950px) {
-  #menu-icon {
-    display: block;
+@media (max-width: 1075px) {
+  .menu-icon {
+    display: flex;
   }
 
   .navlist {
@@ -198,6 +206,11 @@ header.scrolled {
     background: var(--bg-color);
     transition: all 0.5s ease;
     overflow-y: auto;
+    z-index: 999; /* Adicionado para garantir que apareça acima */
+  }
+
+  .navlist.active {
+    right: 0;
   }
 
   .navlist li {
@@ -208,10 +221,6 @@ header.scrolled {
     display: block;
     padding: 17px;
     font-size: 22px;
-  }
-
-  .navlist.active {
-    right: 0;
   }
 
   .top-btnn {
@@ -228,14 +237,9 @@ header.scrolled {
     width: 80px;
   }
 
-  .navlist {
-    width: 100%;
-  }
-
   .navlist a {
     padding: 15px;
     font-size: 20px;
   }
 }
-
 </style>
