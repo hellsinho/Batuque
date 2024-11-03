@@ -20,7 +20,7 @@
 
   --h1-font: 4.5rem;
   --h2-font: 2.9rem;
-  --p-font: 1.2rem;
+  --p-font: 1rem;
 }
 
 body {
@@ -52,3 +52,6 @@ form textarea::placeholder {
   font-size: 15px;
 }
 
+textarea {
+  resize: none;
+}

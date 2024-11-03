@@ -51,6 +51,10 @@ export default {
   --p-font: 1.2rem;
 }
 
+textarea{
+  resize: none;
+}
+
 .bug-report {
   background-color: var(--bg-color);
   padding: 2rem;

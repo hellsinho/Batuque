@@ -6,6 +6,7 @@
     <ProjectOverview />
     <Services />
     <Resources />
+    <RoadMap />
     <BugReport />
     <Contact />
     <Footer />
@@ -18,6 +19,7 @@ import Hero from './components/Hero.vue';
 import About from './components/About.vue';
 import Services from './components/Services.vue';
 import Resources from './components/Resources.vue';
+import RoadMap from './components/RoadMap.vue';
 import BugReport from './components/BugReport.vue';
 import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
@@ -31,6 +33,7 @@ export default {
     ProjectOverview,
     Services,
     Resources,
+    RoadMap,
     BugReport,
     Contact,
     Footer,

@@ -15,6 +15,8 @@
       <li><a href="#about">Sobre</a></li>
       <li><a href="#services">Demonstração</a></li>
       <li><a href="#resources">Tecnologias</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+
     </ul>
 
     <div class="top-btnn" data-aos="fade-down" data-aos-delay="400">
@@ -108,7 +110,7 @@ header.scrolled {
 
 .navlist a {
   font-size: var(--p-font);
-  font-weight: 600;
+  font-weight: 400;
   color: var(--other-color);
   transition: all 0.5s ease;
   padding: 10px;

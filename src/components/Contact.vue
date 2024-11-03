@@ -33,6 +33,10 @@ export default {
 
 <style scoped>
 
+textarea{
+  resize: none;
+}
+
 .contact {
   background-color: var(--second-bg-color);
   padding: 2rem;

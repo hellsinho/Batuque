@@ -50,9 +50,14 @@ export default {
 </script>
 
 <style scoped>
-.resources {
+template{
   background-color: var(--second-bg-color);
+
+}
+
+.resources {
   padding: 2rem 0;
+  margin-inline: 4rem;
 }
 
 .center-text {
