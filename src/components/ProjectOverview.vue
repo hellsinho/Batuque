@@ -47,10 +47,6 @@
           <img src="../../public/img/members/Helson.jpg" alt="Helson Gonçalves" class="team-member-image" />
           <strong>Helson Gonçalves</strong> - Desenvolvedor
         </li>
-        <li>
-          <img src="../../public/img/members/Rian.jpg" alt="Rian Gabriel" class="team-member-image" />
-          <strong>Rian Gabriel</strong> - Desenvolvedor
-        </li>
       </ul>
     </div>
   </section>

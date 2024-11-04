@@ -1,14 +1,16 @@
 <!-- src/pages/LoginPage.vue -->
 <template>
-    <div>
-      <h1>Login</h1>
-      <!-- Formulário de login ou conteúdo da página de login -->
-    </div>
+      <LoginForm />
   </template>
   
-  <script>
+<script>
+  import LoginForm from '../components/forms/LoginForm.vue';
+
   export default {
     name: 'LoginPage',
+    components: {
+      LoginForm,
+    },
   };
-  </script>
+</script>
   
