@@ -14,7 +14,7 @@
       <a href="#"><i class="ri-youtube-fill"></i></a>
     </div>
     <div class="main-btn" data-aos="fade-up" data-aos-delay="200">
-      <a href="#home" class="btn">Conheça a Batuque</a>
+      <a href="/login" class="btn">Baixar Batuque</a>
       <a href="#about" class="btn btn2">Saiba mais</a>
     </div>
   </section>
