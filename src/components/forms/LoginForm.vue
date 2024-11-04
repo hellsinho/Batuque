@@ -80,8 +80,17 @@ export default {
     box-shadow: none;
 }
 
+.remember-account{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    font-size: 0.8rem;
+}
+
 .forget-password{
     width: 100%;
+    text-align: right;
 }
 
 .forget-password a{
@@ -89,18 +98,8 @@ export default {
     font-weight: 300;
 }
 
-.remember-account{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 0 1rem 0;
-
-    font-size: 0.8rem;
-}
-
 .btns-login-form{
     display: flex;
-    justify-content: space-between;
 }
 
 .btn {
@@ -112,7 +111,6 @@ export default {
   font-size: 0.8rem;
   font-weight: 600;
   transition: all 0.5s ease;
-  margin: 0 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: 0;
