@@ -10,18 +10,17 @@
                 <input type="email" id="login-email" placeholder="Digite seu e-mail" v-model="email" required>
                 <label for="login-senha">Senha</label>
                 <input type="password" id="login-senha" placeholder="Digite sua senha" v-model="password" required>
+                <label for="login-confirmar-senha">Confirmar senha</label>
+                <input type="password" id="login-confirmar-senha" placeholder="Digite a senha novamente" v-model="password" required>
                 <div class="remember-account">
                     <div class="login-remember">
                         <input class="checkbox" type="checkbox" id="checkbox-remember">
-                        <label for="checkbox-remember">Lembrar-me</label>
-                    </div>
-                    <div class="forget-password">
-                        <a href="#">Esqueci minha senha</a>
+                        <label for="checkbox-remember">Concordo com os termos de uso.</label>
                     </div>
                 </div>
                 <div class="btns-login-form">
-                    <button type="submit" class="btn">Logar</button>
-                    <router-link to="/registrar" class="btn btn2">Registrar-se</router-link>
+                    <button type="submit" class="btn">Registrar</button>
+                    <router-link to="/login" class="btn btn2">Logar-se</router-link>
                 </div>
             </div>
         </form>
@@ -31,12 +30,7 @@
 
 <script>
 export default {
-  name: 'LoginForm',
-  methods: {
-    irParaRegistrar() {
-      this.$router.push('/registrar');
-    },
-  },
+  name: 'RegisterForm',
 };
 </script>
 
@@ -100,15 +94,6 @@ export default {
     margin: 0 0 1rem 0;
     font-size: 0.8rem;
     font-weight: 300;
-}
-
-.forget-password{
-    width: 100%;
-    text-align: right;
-}
-
-.forget-password a{
-    color: #fff;
 }
 
 .btns-login-form{
