@@ -7,7 +7,7 @@ import RegisterPage from './pages/RegisterPage.vue';
 const routes = [
   { path: '/', name:'LandingPage', component: LandingPage },
   { path: '/login', name: 'LoginPage', component: LoginPage },
-  { path: '/registrar', name: 'RegisterPage', component: RegisterPage },
+  { path: '/register', name: 'RegisterPage', component: RegisterPage },
 ];
 
 const router = createRouter({

@@ -239,6 +239,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# Credêncials
+.env
+
 ### VisualStudioCode template
 .vscode/*
 !.vscode/settings.json

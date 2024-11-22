@@ -3,15 +3,15 @@
         <div class="logo">
             <router-link to="/"><img src="../../../public/img/logo.svg" alt="logo"></router-link>
         </div>
-        <form @submit.prevent="login">
-            <h2>Login</h2>
+        <form @submit.prevent="register">
+            <h2>Registrar-se</h2>
             <div class="form-group">
                 <label for="login-email">Email</label>
                 <input type="email" id="login-email" placeholder="Digite seu e-mail" v-model="email" required>
                 <label for="login-senha">Senha</label>
                 <input type="password" id="login-senha" placeholder="Digite sua senha" v-model="password" required>
                 <label for="login-confirmar-senha">Confirmar senha</label>
-                <input type="password" id="login-confirmar-senha" placeholder="Digite a senha novamente" v-model="password" required>
+                <input type="password" id="login-confirmar-senha" placeholder="Digite a senha novamente" v-model="confirmPassword" required>
                 <div class="remember-account">
                     <div class="login-remember">
                         <input class="checkbox" type="checkbox" id="checkbox-remember">
@@ -29,8 +29,29 @@
 
 
 <script>
+import { registerUser } from '../../services/authService';
+
 export default {
-  name: 'RegisterForm',
+  name: 'registrarForm',
+  data() {
+    return {
+      email: '',
+      password: '',
+      errorMessage: ''
+    };
+  },
+  methods: {
+    async register() {
+      try {
+        const result = await registerUser(this.email, this.password);
+        console.log('Registro bem-sucedido:', result);
+        alert('Usuário registrado com sucesso!');
+      } catch (error) {
+        console.error('Erro no login:', error);
+        this.errorMessage = error.message;
+      }
+    }
+  }
 };
 </script>
 
