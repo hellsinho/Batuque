@@ -14,10 +14,14 @@
                 <input type="password" id="login-confirmar-senha" placeholder="Digite a senha novamente" v-model="confirmPassword" required>
                 <div class="remember-account">
                     <div class="login-remember">
-                        <input class="checkbox" type="checkbox" id="checkbox-remember">
-                        <label for="checkbox-remember">Concordo com os termos de uso.</label>
+                      <input class="checkbox" type="checkbox" id="checkbox-remember" v-model="agreeTerms"> <label for="checkbox-remember">Concordo com os termos de uso.</label>
                     </div>
                 </div>
+                
+                <div v-if="errorMessage" class="error-message"> 
+                  {{ errorMessage }} 
+                </div>
+
                 <div class="btns-login-form">
                     <button type="submit" class="btn">Registrar</button>
                     <router-link to="/login" class="btn btn2">Logar-se</router-link>
@@ -37,18 +41,31 @@ export default {
     return {
       email: '',
       password: '',
+      confirmPassword: '',
+      agreeTerms: false,
       errorMessage: ''
     };
   },
   methods: {
     async register() {
+      if (!this.agreeTerms) {
+        this.errorMessage = 'Você deve concordar com os termos de uso!';
+        return; 
+      }
+
+      if (this.password !== this.confirmPassword) {
+        this.errorMessage = 'As senhas não correspondem!';
+        return;
+      }
+
       try {
         const result = await registerUser(this.email, this.password);
         console.log('Registro bem-sucedido:', result);
         alert('Usuário registrado com sucesso!');
+        this.$router.push('/login');
       } catch (error) {
-        console.error('Erro no login:', error);
-        this.errorMessage = error.message;
+        console.error('Erro no registro:', error); 
+        this.errorMessage = error.response ? error.response.data.error : 'E-mail já cadastrado!';
       }
     }
   }
@@ -119,6 +136,7 @@ export default {
 
 .btns-login-form{
     display: flex;
+    
 }
 
 .btn {
@@ -161,6 +179,8 @@ export default {
   background: var(--main-color);
   color: var(--bg-color);
 }
+
+.error-message { color: red; margin-bottom: 10px; }
 
 @keyframes fadeInUp {
   from {
