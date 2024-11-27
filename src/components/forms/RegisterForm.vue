@@ -1,5 +1,5 @@
 <template>
-    <div class="login-card">
+    <div class="register-card">
         <div class="logo">
             <router-link to="/"><img src="../../../public/img/logo.svg" alt="logo"></router-link>
         </div>
@@ -73,7 +73,7 @@ export default {
 
 <style>
 
-.login-card {
+.register-card {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -90,7 +90,7 @@ export default {
     margin-bottom: 2rem;
 }
 
-.login-card form {
+.register-card form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -105,7 +105,7 @@ export default {
     padding: 2rem;
 }
 
-.login-card h2 {
+.register-card h2 {
     font-size: 2rem;
     font-weight: 700;
     color: var(--h1-font);
@@ -136,60 +136,6 @@ export default {
 .btns-login-form{
     display: flex;
     
-}
-
-.btn {
-  padding: 11px 26px;
-  background: var(--main-color);
-  color: var(--bg-color);
-  border: 2px solid var(--main-color);
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  transition: all 0.5s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-  cursor: pointer;
-}
-
-.btn2 {
-  background: transparent;
-  color: var(--main-color);
-  border: 2px solid var(--main-color);
-  margin-left: 15px;
-  transition: all 0.5s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-  animation-delay: 0.1s;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: transparent;
-  color: var(--main-color);
-  box-shadow: 0 0 20px var(--main-color);
-}
-
-.btn2:hover {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-.error-message { color: red; margin-bottom: 10px; }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 </style>
