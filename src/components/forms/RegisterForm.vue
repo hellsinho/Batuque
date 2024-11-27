@@ -61,7 +61,6 @@ export default {
       try {
         const result = await registerUser(this.email, this.password);
         console.log('Registro bem-sucedido:', result);
-        alert('Usuário registrado com sucesso!');
         this.$router.push('/login');
       } catch (error) {
         console.error('Erro no registro:', error); 

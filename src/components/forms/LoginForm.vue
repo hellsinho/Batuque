@@ -14,11 +14,10 @@ export default {
       try {
         const result = await loginUser(this.email, this.password);
         console.log('Login bem-sucedido:', result);
-        alert('Login realizado com sucesso!');
-        // Redirecionar ou salvar token aqui, se necessário
+        this.$router.push('/perfil');
       } catch (error) {
-        console.error('Erro no login:', error);
-        this.errorMessage = error.message; // Atualiza a mensagem de erro
+        console.error('Erro no registro:', error); 
+        this.errorMessage = error.response ? error.response.data.error : 'Credências inválidas! Tente novamente.';
       }
     }
   }
@@ -37,7 +36,6 @@ export default {
         <input type="email" id="login-email" placeholder="Digite seu e-mail" v-model="email" required>
         <label for="login-senha">Senha</label>
         <input type="password" id="login-senha" placeholder="Digite sua senha" v-model="password" required>
-        <p v-if="errorMessage" style="color: red;">{{ errorMessage }}</p>
         <div class="remember-account">
           <div class="login-remember">
             <input class="checkbox" type="checkbox" id="checkbox-remember">
@@ -47,6 +45,11 @@ export default {
             <a href="#">Esqueci minha senha</a>
           </div>
         </div>
+
+        <div v-if="errorMessage" class="error-message"> 
+          {{ errorMessage }} 
+        </div>
+
         <div class="btns-login-form">
           <button type="submit" class="btn">Logar</button>
           <router-link to="/register" class="btn btn2">Registrar-se</router-link>
@@ -171,6 +174,8 @@ export default {
   background: var(--main-color);
   color: var(--bg-color);
 }
+
+.error-message { color: red; margin-bottom: 10px; }
 
 @keyframes fadeInUp {
   from {
