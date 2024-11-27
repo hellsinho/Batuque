@@ -10,7 +10,7 @@ import NavBar from '../components/userPage/navBarPerfil/navBarPerfil.vue';
 
 
 export default {
-  name: 'PerfilPage',
+  name: 'AccountPerfilPage',
   components: {
     NavBar,
     homeUser,
